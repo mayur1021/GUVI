@@ -1,6 +1,6 @@
 def register():
     db = open("access_register.txt", "r")
-    a = input("Create your username in format __@__.__: ")
+    a = input("Create your username: ")
     d = []
     for line in db:
         x = line.split(",")
@@ -83,7 +83,7 @@ def login():
             x=x.strip()
             info=x.split(",")
             if X==info[0] and Y==info[1]:
-                print("Welcome in the digital world")
+                print("Welcome")
             else:
                 F = input("Forgot Password [Y/N] : ")
 
@@ -92,7 +92,7 @@ def login():
                     login()
 
                 if F == "Y":
-                    b = input("Create your new password with atleast one capital letter one integer and one special character: ")
+                    b = input("Create your new password: ")
                     s = False
 
                     if len(b) < 5 and len(b) > 16:
@@ -117,7 +117,7 @@ def login():
                     if s:
                         c = input("Confirm Password: ")
                         while (c != b):
-                            print("Password not match, Try Again")
+                            print("Password does not match, Try Again")
                             c = input("Try Again: ")
 
                     else:
